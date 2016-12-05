@@ -1,0 +1,93 @@
+Adapun penjelasan dari kegunaan koding diatas, adalah sebagai berikut:
+Fungsi main()
+Program C++ tidak dapat dipisahkan dari fungsi, karena fungsi adalah salah satu dasar penyusun blok pada C++. Sebuah program C++ minimal mengandung sebuah fungsi yaitu fungsi main().
+Fungsi ini menjadi awal dan akhir eksekusi program C++. main adalah nama judul fungsi. Dimulai dari tanda { sampai dengan } disebut tubuh fungsi, atau semua yang terletak didalam tanda {} disebut blok.
+Tanda () digunakan untuk mengapit argumen fungsi, yaitu nilai yang akan dilewatkan ke fungsi. Kata void yang mendahului main() dipakai untuk menyatakan bahwa fungsi ini tidak mempunyai nilai balik (return value). Di dalam tanda {} bisa terkandung sejumlah unit yang disebut pernyataan (statement).
+
+Pernyataan
+Perhatikan baris kode dibawah ini :
+cout<<“Program Menghitung Luas Dan Keliling Lingkaran”;
+Baris tersebut merupakan sebuah pernyataan yang digunakan untuk menampilkan tulisan yang terletak pada sepasang tanda petik ganda ke layar. Tulisan yang terletak pada sepasang tanda petik ganda disebut string. Setiap pernyataan harus diakhiri dengan tanda titik koma (;).
+
+Mengenal cout<< var
+Pengenal cout merupakan sebuah obyek yang disediakan oleh C++ untuk mengarahkan data ke standard output (normalnya layar). Tanda << merupakan operator yang disebut operator “penyisipan / peletakan”.
+cout<<“Program Menghitung Luas Dan Keliling Lingkaran”;
+Operator ini mengarahkan operand (data) yang di sebelah kanannya ke obyek yang dikirinya. Pada contoh diatas, string “Program Menghitung Luas Dan Keliling Lingkaran” diarahkan ke cout yang memberikan hasil berupa tampilan string tersebut ke layar.
+
+Mengenal cin >> var
+Fungsi cin merupakan sebuah objeck didalam C++ digunakan untuk
+memasukkan suatu data dapat berupa numerik, string, dan karakter.Var dapat lebih dari satu variabel (cin >> var >> var) dan dapat berupa karakter.  Untuk menggunakan fungsi cin ini, harus menyertakan file
+header iostream.h . Biasanya perintah input cin digunakan untuk penjumlahan dengan variabel angka, sedangakan untuk variabel teks lebih sering manggunakan gets karena lebih mudah dan dapat menampilkan karakter  teks yang  menggunakan spasi .
+
+Mengenal #include
+Baris tersebut bukanlah sebuah pernyataan, itulah sebabnya tidak diakhiri dengan tanda titik koma. Baris tersebut menginstruksikan kepada kompiler untuk menyisipkan file lain (iostream.h) saat program dikompilasi. File-file berakhiran .h disebut file header, yaitu file-file yang berisi berbagai deklarasi seperti fungsi, variabel, dll.
+Pada contoh, file iostream.h perlu disertakan pada program yang melibatkan obyek cout. Karena file iostream.h berisi deklarasi yang diperlukan oleh cout dan berbagai obyek yang berhubungan dengan masukan dan keluaran pada stream.
+
+clrscr()
+Pada baris clrscr(); adalah perintah untuk menghapus layar. Apabila pernyataan di atas digunakan, baris #include perlu disertakan dalam program.
+Contoh penggunaan clrscr() :
+//program03.cpp
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+cout<<"Hai. Selamat belajar C++";
+}
+
+Komentar
+Komentar merupakan bagian penting dalam suatu program.
+Komentar dapat berupa :
+• Tujuan / fungsi program
+• Saat program dibuat atau direvisi
+• Keterangan-keterangan lain tentang kegunaan sejumlah pernyataan dalam program.
+Pada C++ komentar diawali dengan dua tanda garis miring (//). Ini digunakan untuk komentar pada satu baris. Selain itu, komentar dapat juga diawali dengan tanda /* dan diakhiri dengan tanda */. Ini digunakan untuk komentar yang terdiri dari beberapa baris.
+//contoh komentar
+//ini adalah komentar
+/*ini merupakan contoh komentar
+yang bisa digunakan untuk beberapa baris
+ini akhir komentar*/
+
+Fungsi gets()
+fungsi gets() berguna untuk memasukkan data bertipe karakter, tanpa penggunaan format seperti scanf(), dan tidak dapat untuk menginput data numeric ataupun string.
+
+Fungsi getchar()
+fungsi getchar berguna untuk membaca data yang bertipe karakter.
+
+Fungsi Return 0;
+Menyatakan hasil keluaran dari fungsi main() adalah 0. Pada C++, return 0 dalam main() menyatakan bahwa program berakhir dengan normal.
+
+ Penggunaan Statement IF (condition) dan Do-While pada C++
+IF (condition) statement
+
+Condition adalah ekspresi yang akan di evaluasi. Jika kondisi ini true, statement akan dieksekusi. Jika false, statement akan diabaikan (tidak dieksekusi) dan program berlanjut ke instruksi berikutnya setelah struktur conditional. Atau dengan kata lain IF dalam C++ digunakan untuk menyatakan pernyataan kondisional (bersyarat).
+Sintaks sederhana IF adalah
+
+if (kondisi)
+statement;
+
+Statement pada sintaks di atas akan dilakukan jika kondisinya bernilai TRUE(tidak sama dengan nol).
+Jika sobat menginginkan lebih dari satu instruksi dijalankan kalau condition adalah true , sobat dapat memberikan blok instruksi dengan mengunakan kurung kurawal { }.
+
+Kita juga dapat menentukan apa yang akan dilakukan kalau condition tidak terpenuhi dengan menggunakan keyword else. Bentuk penulisannya adalah:
+
+if (condition) statement1;
+else statement2;
+
+Struktur if dan else juga dapat digabungkan untuk memeriksa sejumlah nilai, maka formatnya seperti berikut :
+
+if (condition) statement1;
+else if (condition) statement2;
+else statement3;
+
+Statement DO-WHILE
+
+Fungsi dari do while hampir sama dengan fungsi dari while yaitu mengulang statement sesuai dengan kondisi yang ditentukan. Perbedaannya adalah dengan do while statement yang akan diulang terlebih dahulu ditentukan setelah itu menentukan kondisi perulangan. Selain itu Statement DO-WHILE biasa digunakan untuk y/n question. Pernyataan yang berisi konfirimasi ya(yes)/tidak(no).
+
+Syntax do-while:
+do
+{
+  statement;
+}while(kondisi); 
+
+

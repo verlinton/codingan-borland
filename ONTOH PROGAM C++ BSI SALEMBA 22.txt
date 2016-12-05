@@ -1,0 +1,1265 @@
+ONTOH PROGAM C++ BSI SALEMBA 22
+
+BORLAND C++
+
+Bab 1 pengenalan bahasa C++
+
+Program C merupakan bahasa pemrograman tingkat menengah yaitu diantara bahasa tingkat rendah dan tingkat tinggi yang biasa disebut dengan Bahasa Tingkat Tinggi dengan Perintah Assambly.tujuan utamanya adalah membantu membuat dan mengelola program yang besar dan kompleks.
+Pengenalan IDE borland C++.IDE merupakan lembar kerja terpadu untuk pengembangan program.IDE dari borland C++,dapat digunakan untuk : Menulis naskah program,mengkompilasi program,pengujian program,mengaitkan object dan library ke program dan untuk menjalankan program.membuat file editor,file editor merupakan file program yang dapat dicompile dan dijalankan untuk menampilkan hasilnya.untuk menterjemahkan program harus melalui suatu proses yang disebut proses compile dimana proses tersebut menterjemahkan program dari bahasa manusia ke dalam bahasa yang dimengerti oleh komputer yaitu bahasa mesin.caranya adalah menekan hotkey Alt + F9.
+setelah itu menjalankan program dengan proses Run.proses Run merupakan suatu proses menterjemahkan program,melakukan proses linking, membuat file eksekusi dan sekaligus menjalankan program.caranya adalah menekan hotkey Ctrl + F9.
+Program C++ memiliki struktur yang terdiri dari sejumlah blok fungsi,setiap fungsi terdiri dari satu atau beberapa pernyataan yang melaksanakan tugas tertentu.
+
+# include
+Main ()
+{
+Pernyataan ;
+}
+
+
+Contoh : # include
+# include
+Main ()
+{
+Int a = 7 ;
+Char b = ‘G’ ;
+Clrscr () ;
+Printf (“%C merupakan abjad yang ke - %d”, b, a) ;
+}
+
+Output yang akan dihasilkan, dari program contoh-1 diatas adalah :
+
+G merupakan abjad yang ke – 7
+
+
+
+
+Bab 2 : Pengenalan Model Data, Perintah Masukan dan Keluaran
+
+Pengenalan Tipe Data.Borland C++ memiliki tipe data dasar yaitu diantaranya adalah :
+CHAR,INT,SHORT,LONG,FLOAT,DOUBLE dan LONG DOUBLE.
+Konstanta adalah suatu nilai yang sifatnya tetap.secara garis besar konstanta dapat dibagi menjadi dua bagian yaitu konstanta BILANGAN (1,2-100 bulat.1.1,1.2 dst desimal) dan konstanta TEKS dalam hal ini konstanta teks dibagi menjadi 2.data karakter (char) dapat berbentuk abjad a-z,angka 1-100,notasi atau simbol yang selalu diapit oleh tanda kutip tunggal(‘).contoh : ‘a’ ‘8’ ‘&’ dan seterusnya.data string merupakan rangkaian dari beberapa karakter yang diapit oleh tanda kutip ganda(“).contoh : “mahasiswa” dan lain2.
+Deklarasi konstanta,bentuk penulisannya :
+Const tipe_data nama-konstanta = nilai konstanta ;
+Contoh : const int x = 70 ;
+
+Variabel merupakan suatu tempat untuk menampung data atau konstanta dimemori yang mempunyai nilai atau data yang dapat berubah selama proses program.
+
+Tipe Variabel Simbol Deklarasi
+Integer int
+Floating point float
+Double double
+Karakter char
+Unsigned integer unsigned integer
+Unsigned karakter unsigned char
+Long integer long int
+Unsigned long integer unsigned long integer
+
+Bentuk penulisannya :
+
+Tipe data nama variabel ;
+
+Untuk perintah keluaran yang disediakan di Borland C++,diantaranya adalah :
+*printf
+*puts
+*putchar
+*cout
+Fungsi keluaran yang paling banyak digunakan dalam Borland C++ adalah perintah keluaran PRINTF dan COUT.
+
+
+SAYA BERI CONTOH SOAL :
+
+1. “RESTORAN ENAK”
+Masukkan nama makanan
+Masukkan jumlah beli
+Masukkan harga makanan
+Total pembayaran
+Diskon 10%
+Jadi total bayarnya ?
+
+
+
+JAWABANNYA :
+
+#include
+#include
+#include
+main ()
+{
+char nama[12];
+int jumbel;
+float harga,diskon,total,totbay;
+cout<<"restoran enak"<
+cout<<"nama makanan=";cin>>nama;
+cout<<"jumbel=";cin>>jumbel;
+cout<<"harga=";cin>>harga;
+
+total=jumbel*harga;
+diskon=total*0.1;
+totbay=total-diskon;
+
+cout<<"total="<<
+cout<<"diskon="<<
+cout<<"totbay="<<
+getch();
+}
+
+
+2. Buatlah program untuk menghitung nilai rata-rata dari seorang siswa,
+Dengan ketentuan sbb :
+
+*nama siswa,nilai pertandingan 1,nilai pertandingan 2,nilai pertandingan 3 diinput
+*nilai rata2 merupakan hasil dari pertandingan 1,2 dan 3 dibagi 3.
+*tampilan yang diinginkan sbb :
+
+Layar masukkan
+Program hitung nilai rata-rata
+
+Nama siswa : …( diinput )
+Nilai pertandingan 1 : …( diinput )
+Nilai pertandingan 2 : …( diinput )
+Nilai pertandingan 3 : …( diinput )
+
+Layar keluaran
+
+Siswa yang bernama…….( tampil data )
+Memperoleh nilai rata-rata……( hasil proses ) dari perlombaan yang diikutinya.
+
+
+
+
+
+JAWABAN :
+
+#include
+#include
+#include
+main()
+{
+int nilai1,nilai2,nilai3;
+float rata_rata;
+char nama[11];
+cout<<"program menghitung rata_rata"<
+printf("nama siswa=");scanf("%s",nama);
+cout<<"nilai pertandingan1=";cin>>nilai1;
+cout<<"nilai pertandingan2=";cin>>nilai2;
+cout<<"nilai pertandingan3=";cin>>nilai3;
+rata_rata=(nilai1+nilai2+nilai3)/3;
+printf("siswa yang bernama%s",nama);
+cout<<"nilai rata_rata ="<
+getch();
+}
+Bab 3. OPERATOR
+
+Merupakan simbol atau karakter yang biasa dilibatkan dalam program untuk melakukan sesuatu operasi atau manipulasi,seperti penjumlahan,pengurangan dan lain-lain.
+Operator mempunyai sifat sebagai berikut :
+
+• Unary
+Sifat unary pada operator adalah hanya melibatkan sebuah operator pada suatu
+Operasi aritmatik.contoh : -5
+
+• Binary
+melibatkan dua buah operand pada suatu operasi aritmatik.
+Contoh : 4 + 8
+
+• Ternary
+Melibatkan tiga buah operand pada suatu operasi aritmatik.
+Contoh : (10 % 3) + 4 + 2
+
+
+
+
+
+
+Table operator aritmatik.
+
+
+Operator keterangan Contoh
+* Perkalian 4 * 5
+/ Pembagian 6 / 2
+% Sisa pembagian 5 % 2
++ Penjumlahan 7 + 2
+- Pengurangan 6 - 2
+
+
+
+
+Table operator unary.
+
+Opertaor Keterangan Contoh
++ Tanda plus -4
+- Tanda minus +6
+
+
+
+
+Bab 4 . Operasi Penyeleksian Kondisi ( BRANCING )
+
+Pernyataan percabangan digunakan untuk memecahkan persoalan untuk mengambil suatu keputusan diantara sekian pernyataan yang ada. Untuk keperluan pengambilan keputusan.
+Borlan C ++ menyediakan beberapa perintah antara lain.
+
+Pernyataan IF
+Pengertiannya jika kondisi bernilai benar maka perintah akan dikerjakan dan jika tidak memenuhi syarat maka akan diabaikan.
+
+
+
+
+If (kondisi)
+Pernyataan ;
+
+
+
+Penulisan kindisi harus didalam tanda kurung dan berupa ekspresi relasi dan penulisan pernyataan dapat berupa sebuah pernyataan tunggal,majemuk atau pernyataan kosong.
+Jika If diikuti pernyataan majuemuk,bentuk penulisannya sbb :
+
+
+
+
+If (kondisi)
+{
+Pernyataan
+}
+
+
+
+
+
+
+Contoh :
+
+Menentukan besarnya potongan dari pembelian barang yang diberikan seorang pembeli dengan keriteria :
+
+- Tidak ada potongan jika total pembelian kurang dari Rp.50.000.-
+- Jika total pembelian lebih dari atau sama dengan Rp.50.000.-
+Potongan yang diterima sebesar 20% dari total pembelian.
+
+JAWABAN :
+
+#include
+#include
+#include
+main()
+{
+Double tot_beli,potongan =0,jum_bayar=0;
+Clrscr ();
+
+Cout<<”total pembelian Rp. “;cin>>tot_beli;
+
+If (tot_beli >= 50000)
+Potongan = 0.2 * tot_beli;
+
+Cout<<”besarnya potongan Rp. “<<
+
+Jum_bayar = tot_beli – potongan;
+
+Cout<<”jumlah yang harus dibayarkan Rp. “<
+
+Getch () ;
+}
+
+
+
+
+Output yang dihasilkan dari contoh diatas adalah :
+
+
+
+
+
+
+Total pembelian Rp.50000
+Besarnya potongan Rp.10000
+Jumlah yang harus dibayarkan Rp.40000
+
+
+
+
+
+
+
+
+Pernyataan If - Else
+Pengertiannya jika kondisi bernilai benar maka perintah -1 akan dikerjakan dan jika tidak memenuhi syarat maka akan mengerjakan perintah-2.
+
+Bentuk umumnya adalah sbb :
+
+
+
+If ( kondisi )
+Perintah -1 ;
+Else
+Perintah -2 ;
+
+Perintah 1 dan 2 dapat berupa sebuah pernyataan tunggal,pernyataan majemuk.
+Jika pemakaian If – Else diikuti dengan pernyataan majemuk maka bentuk penulisannya adalah sbb :
+
+
+If ( kondisi )
+{
+Perintah -1 ;
+……………..
+}
+Else
+{
+Perintah -2 ;
+………………
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+QUIS A
+
+Soal Quis A
+1. Gunakan struct dengan nama struct Film isi dari struct : kode_film, judul, harga.
+2. Gunakan fungsi untuk menghitung total bayar dan uang kembali, ppn 10% dari subtotal.
+3. Gunakan Brancing (if atau switch case) untuk menampilkan :
+
+
+Kode Film :
+1
+2
+3
+
+Judul :
+Ketika Cinta Bertasbih
+Sang pemimpi
+Emak Naik Haji
+
+Harga :
+Rp.23.000,-
+Rp.25.000,-
+Rp.25.000,-
+
+4. Gunakan Array untuk input dan menampilkan data lebih dari 1.
+5. Gunakan Label.
+
+Bentuk Tampilan Input :
+
+Bioskop Jatiwaringin
+Jumlah Data yang akan diinput : (input)
+
+Masukan Kode Film : (input)
+Judul Film : (output)
+Harga Tiket : (output)
+Masukan Jumlah Beli : (input)
+Total Bayar : (output)
+
+Bentuk Tampilan Outputnya :
+Laporan Data Bioskop Jatiwaringin
+No. Kode Film Judul Film Jumlah Beli Subtotal Ppn Total
+1 …………….. ……………… ……………….. ………….. . …… …………
+2 …………….. ……………… ……………….. ………….. . …… …………
+
+Total Penjualan Hari Ini : Rp…………
+
+Masukan Uang Bayar : Rp…………..
+Uang kembali : Rp…………..
+
+Ingin diinput lagi? Y/T : ……………..
+
+Jawabnya :
+#include
+#include
+#include
+#include
+
+int rumus1 (int a,int b)
+{return (a+b);
+}
+int rumus2 (int a,int b)
+{return (a-b);
+}
+
+main()
+{
+struct
+{int h;
+char kode,*jufi;
+}film[20];
+
+int i,j,jumbel[20],subt[20],ppn[20],tot[20],ubay,ukem;
+char awal,lagi;
+float totpen;
+
+awal:
+clrscr();
+
+cout<<"----------------------------------------------------"<
+cout<<" Bioskop Jatiwaringin "<
+cout<<"----------------------------------------------------"<
+cout<<"Jumlah Data yang Akan diinput : ";cin>>j;
+cout<
+
+for (i=1;i<=j;i++)
+{
+cout<<"Data Ke-"<<
+cout<<"Masukan Kode Film : ";cin>>film[i].kode;
+
+if (film[i].kode=='1')
+{film[i].jufi="KCO";
+film[i].h=23000;
+}
+else
+if (film[i].kode=='2')
+{film[i].jufi="SP";
+film[i].h=25000;
+}
+else
+if (film[i].kode=='3')
+{film[i].jufi="EPH";
+film[i].h=25000;
+}
+else
+{film[i].jufi="Data Salah";
+film[i].h=0;
+}
+
+cout<<"Judul Film : "<<
+cout<<"Harga Tiket : "<<
+cout<<"Masukan Jumlah beli : ";cin>>jumbel[i];
+cout<<"=============================="<
+subt[i]=film[i].h*jumbel[i];
+cout<<"Total Bayar : "<<
+cout<<
+}
+
+cout<<"================================================================"<
+cout<<" LAPORAN DATA BIOSKOP JATIWARINGIN "<
+cout<<"================================================================"<
+cout<<"No Kode Judul Jumlah Subtotal Ppn Total "<
+cout<<"================================================================"<
+
+for (i=1;i<=j;i++)
+{
+ppn[i]=0.1*subt[i];
+tot[i]=rumus1(subt[i],ppn[i]);
+totpen=rumus1(totpen,tot[i]);
+
+cout<<<
+cout<<<
+cout<<<
+cout<<<
+cout<<<
+cout<<<
+cout<<<<
+cout<<"================================================================"<
+}
+
+cout<<"Total penjualan Hari Ini : Rp."<<
+cout<
+cout<<"Masukan Uang Bayar : Rp.";cin>>ubay;
+ukem=rumus2(ubay,totpen);
+cout<<"Uang Kembali : Rp."<<
+cout<
+cout<<"Ingin diinput lagi? (y/t) : ";cin>>lagi;
+
+if (lagi=='y')
+goto awal;
+else
+goto keluar;
+
+keluar:
+
+getch();
+}
+
+
+CLASS
+
+Sama seperti structure, yaitu untuk mengelompokan sejumlah data yang mempunyai tipe data yang berbeda.
+Contoh Soalnya :
+
+
+Akademi Informatika
+Jumlah Data :
+Periode Akademik : 2010
+Bulan : Juni
+
+Data ke-
+NIM :
+Nama Mahasiswa :
+Kode Akademi [AMK/ABA/ASM] :
+Nama Akademik :
+
+Ketentuan :
+1. Gunakan Class dengan nama akademik yang isinya (Kode Akademi, Nama Akademi)
+2. Biaya Kuliah = Biaya Semester + Biaya Pembangunan.
+3. Biaya Persemester = Rp.980.000,-
+Biaya pembangunan :
+ABA (Akademi Bahasa Asing) = Rp.1.000.000,-
+AMK (Akademi Manajemen Komputer) = Rp.1.500.000,-
+AK (Akademi Akutansi) = Rp.800.000,-
+Jawab :
+#include
+#include
+#include
+#include
+
+judul()
+{cout<<" Akademi Informatika "<
+cout<<"---------------------"<
+}
+
+class
+{public:
+char kode[4],*naked;
+}akademi[15];
+
+main()
+{
+int i,j,bysem=980000,bypem[15],bykul[15],period;
+char bulan[10],nim[8][15],nama[8][15];
+
+judul();
+cout<<"Jumlah Data : ";cin>>j;
+cout<<"Periode Akademi : ";cin>>period;
+cout<<"Bulan : ";cin>>bulan;
+cout<<"--------------------------"<
+cout<<
+
+for (i=1;i<=j;i++)
+{
+cout<<"Data Ke-"<<
+cout<<"NIM : ";cin>>nim[i];
+cout<<"Nama Mhs : ";cin>>nama[i];
+cout<<"Kode Akademi [AMK/ABA/AK] : ";cin>>akademi[i].kode;
+
+if (strcmp(akademi[i].kode,"aba")==0)
+{akademi[i].naked="Ak.Bhs Asing";
+bypem[i]=1000000;
+}
+else
+if (strcmp(akademi[i].kode,"amk")==0)
+{akademi[i].naked="Ak.Mnjmn Komp";
+bypem[i]=1500000;
+}
+else
+if (strcmp(akademi[i].kode,"ak")==0)
+{akademi[i].naked="Ak.Akutansi";
+bypem[i]=800000;
+}
+else
+{akademi[i].naked="Kode Salah";
+bypem[i]=0;
+}
+
+cout<<"Nama Akademi : "<<
+cout<<"Biaya Pembangunan : "<<
+bykul[i]=bysem+bypem[i];
+cout<
+}
+
+judul();
+cout<<"-------------------------------------------------------------------------------"<
+cout<<"No NIM Nama_Mhs Kode Nama_Akdm By.Kuliah "<
+cout<<"-------------------------------------------------------------------------------"<
+
+for (i=1;i<=j;i++)
+{
+cout<<<
+cout<<<
+cout<<<
+cout<<<
+cout<<<
+cout<<<<
+cout<<"-------------------------------------------------------------------------------"<
+}
+
+getch();
+}
+
+
+
+STRUCTURE
+
+Structure digunakan untuk mengelompokan seumlah data yang mempunyai tipe data yang berbeda. Variabel-variabel yang membentuk sebuah struktur dinamakan element struktur. Struktur sama seperti Record di dalam bahasa Pemprograman Pascal.
+Contoh Soalnya :
+
+Upah Gaji Karyawan
+NIK :
+Nama :
+Jumlah Jam Kerja :
+Upah Harian :
+- Jumlah jam kerja normal adalah 8 jam. Upah harian diberikan jika jumlah jam kerja lebih dari 8 jam, maka kelebihan jam kerja tersebut dikalikan dengan honor lembur perjam sebesar Rp.1000 untuk setiap kelebihan jam kerja perharinya.
+- Upah normal adalah Rp.25.000,-
+
+Jawabnya :
+#include
+#include
+#include
+
+int rumus(int a);
+main()
+{
+struct
+{char nik[6],nama[12];
+int jjk;
+}karyawan[10];
+
+int i,j;
+
+cout<<"Masukan Jumlah Transaksi : ";cin>>j;
+cout<
+
+for (i=1;i<=j;i++)
+{
+cout<<"Data Ke-"<<
+cout<<"NIK : ";cin>>karyawan[i].nik;
+cout<<"Nama : ";cin>>karyawan[i].nama;
+cout<<"Jumlah Jam Kerja : ";cin>>karyawan[i].jjk;
+cout<
+}
+cout<<
+
+for (i=1;i<=j;i++)
+{
+cout<<"NIK : "<<
+cout<<"Nama : "<<
+cout<<"Jumlah Jam Kerja : "<<
+cout<<"Upah Harian : "<<
+cout<
+}
+getch();
+}
+int rumus (int jjk)
+{ if (jjk>8)
+{return ((jjk-8)*1000)+25000;
+}
+else
+{return 25000;
+}
+}
+
+
+DEFINE
+
+Define digunakan untuk mengganti teks yang digunakan dengan nama konstanta yang diinginkan.
+Contoh Soal :
+
+Hitunglah luas sebuah kubus dengan rumus sisi x sisi.
+Jawabannya :
+#include
+#include
+#include
+#include
+
+#define awal {
+#define akhir }
+#define mulai() main()
+#define cetak cout
+#define masuk cin
+#define tahan() getch()
+#define LS_KUBUS (sisi*sisi)
+#define baris endl
+
+mulai()
+awal
+int sisi,ls_kubus;
+
+cetak<<"Program Menggunakan #define"<
+cetak<<"masukan Nilai Sisi Kubus : ";masuk>>sisi;
+
+ls_kubus=LS_KUBUS;
+// LS_KUBUS = Lihat di #define LS_KUBUS //
+
+cetak<<"Luas Kubus Adalah : "<<
+tahan();
+akhir
+
+
+
+STRREV
+
+Fungsi ini digunakan untuk membalik letak urutan pada string. Harus disertakan string.h pada File Header.
+Contoh Soalnya :
+
+Buatlah Kebalikan kata dari “Contoh Soal strrev”, dengan menggunakan fungsi strrev().
+
+Jawabnya :
+
+#include
+#include
+#include
+#include
+
+main()
+{
+char kata[20];
+
+cout<<"Masukan Kata : ";gets(kata);
+
+strrev(kata);
+
+cout<<"hasil Perubahan : "<<
+getch();
+}
+
+
+
+STRCPY
+
+Strcpy juga disebut fungsi, digunakan untuk menyalin string asal ke-variabel string tujuan. Dengan syarat string tujuan harus mempunyai tipe data dan ukuran yang sama dengan string asal. Perlu ditambahkan string.h pada bagian file headernya.
+Contoh Soal :
+
+Buatlah tampilan pemindahan “BSI Dewi Sartika” dengan menggunakan strcopy.
+
+Jawabnya :
+#include
+#include
+#include
+#include
+#include
+
+main()
+{
+char huruf[20],pindah[20];
+
+cout<<"Masukan Kata : ";gets(huruf);
+
+strcpy(pindah,huruf);
+
+cout<<"Pemindahannya : "<<
+getch();
+}
+
+
+
+STRACT
+
+Strcat merupakan salah satu fungsi, digunakan untuk menambah string sumber kebagian akhir dari string tujuan. Dibagian file header juga harus diikut sertakan : string.h dan ctype.h
+Contoh Soalnya :
+
+Buatlah penggabungan kata dari kata :
+- Ryan
+- Farissa
+Jawabnya :
+#include
+#include
+#include
+#include
+#include
+
+main()
+{
+char a1[20],a2[20];
+
+cout<<"Masukan Kata Ke-1 : ";cin>>a1;
+cout<<"Masukan Kata Ke-2 : ";cin>>a2;
+
+strcat (a1,a2);
+
+cout<<"Hasil Penggabungan Katanya : "<<
+getch();
+}
+
+
+
+DO - WHILE
+
+Pernyataan Perulangan Do – While merupakan bentuk perulangan yang melaksanakan perulangan terlebih dahulu dan pengujian perulangan dilakukan dibelakang.
+
+Contoh Soalnya :
+
+Buatlah urutan bilangan genap dari 2 sampai 10 dengan menggunakan do – while.
+Jawab :
+
+#include
+#include
+#include
+
+main()
+{
+int bil=2;
+
+do
+{
+cout<<<" ";
+bil+=2;
+}
+while (bil<=10);
+
+getch();
+}
+
+
+WHILE
+
+While merupakan intruksi perulangan yang mirip dengan perulangan for. Bentuk perulangan while dikendalikan oleh syarat tertentu, yaitu perulangan akan terus dilaksanakan selama syarat tersebut terpenuhi.
+
+Contoh Soalnya :
+
+Buatlah Output data dari 1 sampe 10 dengan menggunakan While.
+Jawab :
+
+#include
+#include
+#include
+
+main()
+{
+int bil=1;
+
+while (bil<=10)
+{
+cout<<<" ";
+++bil;
+}
+
+getch();
+}
+
+NESTED IF
+
+Nested if merupakan pernyataan if berada didalam pernyataan if yang lainnya.
+Contoh soalnya adalah :
+Suatu Perusahaan memberikan komisi kepada para salesman dengan ketentuan sebagai berikut :
+
+- Bila Salesman dapat menjual barang hingga Rp.20.000 akan diberikan uang jasa sebesar Rp.10.000 ditambah dengan uang komisi 10% dari pendapatan yang diperoleh hari itu.
+- Bila Salesman dapat menjual barang hingga Rp.30.000 akan diberikan uang jasa sebesar Rp.20.000 ditambah dengan uang komisi 15% dari pendapatan yang diperoleh hari itu.
+- Bila Salesman dapat menjual barang hingga Rp.50.000 akan diberikan uang jasa sebesar Rp.30.000 ditambah dengan uang komisi 20% dari pendapatan yang diperoleh hari itu.
+
+Jawabnya :
+
+
+#include
+#include
+#include
+
+main()
+{
+float pdpt,jasa=0,komisi=0,total=0;
+
+cout<<"Pendapatan hari ini : Rp.";cin>>pdpt;
+
+if (pdpt>=20000 && pdpt<30000)
+{ jasa=10000;
+komisi=0.1*pdpt;
+}
+else
+{
+if (pdpt>=30000 && pdpt<50000)
+{ jasa=20000;
+komisi=0.15*pdpt;
+}
+else
+if (pdpt>=50000)
+{ jasa=30000;
+komisi=0.2*pdpt;
+}
+else
+{ jasa=0;
+komisi=0;
+}
+}
+
+
+
+IF-ELSE
+
+
+Bentuk dari IF – ELSE Majemuk sebenarnya serupa dengan NESTED IF, keuntungan penggunaan IF – ELSE Majemuk disbanding dengan NESTED IF adalah penggunaan bentuk penulisan yang lebih sederhana.
+Contoh soalnya adalah :
+
+Suatu Perusahaan memberikan komisi kepada para salesman dengan ketentuan sebagai berikut :
+- Bila Salesman dapat menjual barang hingga Rp.20.000 akan diberikan uang jasa sebesar Rp.10.000 ditambah dengan uang komisi 10% dari pendapatan yang diperoleh hari itu.
+- Bila Salesman dapat menjual barang hingga Rp.30.000 akan diberikan uang jasa sebesar Rp.20.000 ditambah dengan uang komisi 15% dari pendapatan yang diperoleh hari itu.
+- Bila Salesman dapat menjual barang hingga Rp.50.000 akan diberikan uang jasa sebesar Rp.30.000 ditambah dengan uang komisi 20% dari pendapatan yang diperoleh hari itu.
+
+Jawabnya :
+
+#include
+#include
+#include
+
+main()
+{
+float pdpt,jasa=0,komisi=0,total=0;
+
+cout<<"Pendapatan hari ini : Rp.";cin>>pdpt;
+
+if (pdpt>=20000 && pdpt<30000)
+{ jasa=10000;
+komisi=0.1*pdpt;
+}
+else
+if (pdpt>=30000 && pdpt<50000)
+{ jasa=20000;
+komisi=0.15*pdpt;
+}
+else
+if (pdpt>=50000)
+{ jasa=30000;
+komisi=0.2*pdpt;
+}
+else
+{ jasa=0;
+komisi=0;
+}
+
+total=komisi+jasa;
+
+cout<<"uang Jasa : Rp."<<
+cout<<"Uang Komisi : Rp."<<
+cout<<"==============================="<
+cout<<"hasil Total : Rp."<<
+
+getch();
+}
+
+
+SWITCH CASE
+
+
+
+Switch Case merupakan pernyataan yang dirancang khusus untuk menangani pengambilan keputusan yang melibatkan sejumlah atau banyak alternatif. Sama seperti if - else bertingkat, tetapi penggunaannya untuk memeriksa data yang bertipe karakter atau integer.
+
+Contoh Soalnya :
+
+Masukan Nama Pembeli :
+Masukan Kode Paket :
+Masukan jumlah Pesan :
+Total Bayar :
+Potongan :
+Total Dibayar :
+
+Paket A = Hemat Ber4, Rp.100.000,-
+Paket B = Panas Pedas Rp.150.000,-
+Paket C = Hemat Sendiri Rp.75.000,-
+
+Gunakan Switch Case
+
+
+Jawabannya :
+
+#include
+#include
+#include
+main()
+{
+int jp,h,d,tb,thb;
+char np[20],*kp,kode;
+
+cout<<"Nama Pembeli : ";cin>>np;
+cout<<"Kode Paket : ";cin>>kode;
+cout<<"jumlah Pesan : ";cin>>jp;
+cout<<"========================="<
+
+switch(kode)
+{
+case 'A':
+kp="Hemat ber4";
+h=100000;
+break;
+case 'B':
+kp="Panas Pedas";
+h=150000;
+break;
+case 'C':
+kp="Hemat Sendiri";
+h=75000;
+break;
+default:
+h=0;
+}
+
+cout<<"Nama Pembeli : "<<
+cout<<"Paket Dipesan : "<<
+cout<<"Jumlah Pesan : "<<
+tb=h*jp;
+cout<<"Total Bayar : "<<
+
+if (jp>3)
+d=0.1*tb;
+else
+d=0;
+
+cout<<"Potongan : "<<
+cout<<"-----------------------------------------+"<
+thb=tb-d;
+cout<<"total Yang harus Dibayar : "<<
+getch();
+}
+
+
+
+
+FUNGSI JUDUL
+
+
+Fungsi dirancang untuk melaksanakan tugas khusus, yaitu mengurangi pengulangan tulisan program yang berulang atau sama.
+Contoh Soalnya (Fungsi Judul) :
+========================
+Departemen Penerbangan
+========================
+Kode Pesawat Jenis Pesawat Harga
+1 Merpati 400.000
+2 Garuda 500.000
+
+• Gunakan fungsi judul.
+
+Jawabannya :
+#include
+#include
+#include
+#include
+
+judul()
+{cout<<" ========================"<
+cout<<" Departemen Penerbangan"<
+cout<<" ========================"<
+}
+
+main()
+{
+int i,jd,h[10];
+char *j[10],jam[10][10],nama[10][10],kp[10][10];
+
+judul();
+cout<<
+cout<<"Masukan Jumlah Data : ";cin>>jd;
+cout<
+for (i=1;i<=jd;i++)
+{cout<<"Data Ke-"<<
+cout<<"Nama Penumpang : ";cin>>nama[i];
+cout<<"Kode Pesawat : ";cin>>kp[i];
+cout<<"Jam Keberangkatan : ";gets(jam[i]);
+if (strcmp(kp[i],"1")==0)
+{j[i]="Merpati";
+h[i]=400000;
+}
+else
+if (strcmp(kp[i],"2")==0)
+{j[i]="Garuda";
+h[i]=500000;
+}
+else
+{j[i]="-";
+h[i]=0;
+}
+cout<<"Jenis Pesawat : "<<
+cout<<"Harga : "<<
+cout<
+}
+cout<<
+judul();
+cout<
+cout<<"-------------------------------------"<
+cout<<"No Nama Kode Jam Harga "<
+cout<<"-------------------------------------"<
+
+for (i=1;i<=jd;i++)
+{cout<<<
+cout<<<
+cout<<<
+cout<<<
+cout<<<<
+cout<<"-------------------------------------"<
+}
+getch();
+}
+
+
+
+POINTER
+
+
+
+Merupakan sebuah variabel yang berisi alamat dari variable lain. Pada dasarnya pointer digunakan untuk menunjukan ke suatu alamat memori sehingga alamat dari suatu variabel dapat diketahui dengan mudah.
+Operator yang digunakan adalah operator reference ( * )
+Contoh Soalnya :
+
+Buatlah Total Nilai dari sebuah data sekolah dengan syarat jika Total Nilai nya >=80 maka dinyatakan Lulus. Jika Total Nilai di bawah 80 maka dinyatakan Gagal.
+Total Nilai dihitung dari :
+- Nilai Absensi 10%
+- Nilai Tugas 20%
+- Nilai UTS 30%
+- Nilai UAS 40%
+
+Jawabnya :
+#include
+#include
+#include
+
+main()
+{
+double na,nt,uts,uas,tn;
+char nama[20],*keterangan;
+
+cout<<"Nama Siswa : ";cin>>nama;
+cout<<"Nilai Absensi : ";cin>>na;
+cout<<"Nilai Tugas : ";cin>>nt;
+cout<<"Nilai UTS : ";cin>>uts;
+cout<<"Nilai UAS : ";cin>>uas;
+cout<
+
+tn=(0.1*na)+(0.2*nt)+(0.3*uts)+(0.4*uas);
+
+if (tn>=80)
+keterangan="Lulus";
+else if (tn<80)
+keterangan="Gagal";
+
+cout<<"Total Nilai : "<<
+cout<<"Keterangan : "<
+getch();
+}
+
+
+
+ARRAY
+
+Array disebut juga tipe terstruktur yang terdiri dari sejumlah komponen-komponen yang mempunyai tipe yang sama.
+Soalnya :
+Buatlah program dengan menggunakan Array Dimensi 1 (strcmp) dari table di bawah ini :
+
+Kode Barang Jenis Barang Harga
+B01 Televisi 250.000
+C01 Radio 500.000
+
+Jawabnya :
+#include
+#include
+#include
+#include
+#include
+main()
+{
+int i,l,h[4];
+char *j[4],kode[3][4];
+
+cout<<"Masukan Junlah Data : ";cin>>l;
+cout<
+for (i=1;i<=l;i++)
+{cout<<"Data ke-"<<
+cout<<"Masukan Kode Barang : ";cin>>kode[i];
+
+if (strcmp(kode[i],"B01")==0)
+{j[i]="Televisi";
+h[i]=250000;}
+else
+if (strcmp(kode[i],"C02")==0)
+{j[i]="Radio";
+h[i]=500000;}
+else
+{j[i]="Kode Salah";
+h[i]=0;}
+
+cout<<"Nama Barang : "<<
+cout<<"Harga : "<<
+}
+
+cout<<"------------------------------------"<
+cout<<"No Kode Nama Harga "<
+cout<<"------------------------------------"<
+
+for (i=1;i<=l;i++)
+{
+cout<<<
+cout<<<
+cout<<<
+cout<<<<
+}
+getch();
+}
+
+
+
+FUNGSI STRLEN
+Fungsi ini digunakan untuk memperoleh banyaknya karakter dalam string.
+File Header yang harus disertakan adalah : string.h
+
+Soal :
+Buatlah program untuk menghitung panjang kata berikut ini :
+
+Latihan Borlan C++ Fungsi strlen
+
+Jawabnya :
+
+#include
+#include
+#include
+#include
+
+main()
+{
+char huruf[70],pindah[70];
+
+cout<<"Masukkan Kata : ";gets(huruf);
+cout<<"Panjang Kata yang diinput : ";cout<
+getch();
+}
+
+
+
+
+structure
+
+
+Structure digunakan untuk mengelompokan seumlah data yang mempunyai tipe data yang berbeda. Variabel-variabel yang membentuk sebuah struktur dinamakan element struktur. Struktur sama seperti Record di dalam bahasa Pemprograman Pascal.
+Contoh Soalnya :
+
+Upah Gaji Karyawan
+NIK :
+Nama :
+Jumlah Jam Kerja :
+Upah Harian :
+- Jumlah jam kerja normal adalah 8 jam. Upah harian diberikan jika jumlah jam kerja lebih dari 8 jam, maka kelebihan jam kerja tersebut dikalikan dengan honor lembur perjam sebesar Rp.1000 untuk setiap kelebihan jam kerja perharinya.
+- Upah normal adalah Rp.25.000,-
+
+Jawabnya :
+#include
+#include
+#include
+
+int rumus(int a);
+main()
+{
+struct
+{char nik[6],nama[12];
+int jjk;
+}karyawan[10];
+
+int i,j;
+
+cout<<"Masukan Jumlah Transaksi : ";cin>>j;
+cout<
+
+for (i=1;i<=j;i++)
+{
+cout<<"Data Ke-"<<
+cout<<"NIK : ";cin>>karyawan[i].nik;
+cout<<"Nama : ";cin>>karyawan[i].nama;
+cout<<"Jumlah Jam Kerja : ";cin>>karyawan[i].jjk;
+cout<
+}
+cout<<
+
+for (i=1;i<=j;i++)
+{
+cout<<"NIK : "<<
+cout<<"Nama : "<<
+cout<<"Jumlah Jam Kerja : "<<
+cout<<"Upah Harian : "<<
+cout<
+}
+getch();
+}
+int rumus (int jjk)
+{ if (jjk>8)
+{return ((jjk-8)*1000)+25000;
+}
+else
+{return 25000;
+}
+}
+Reaksi: 
+	

@@ -1,0 +1,136 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+ int bil1=0;
+ cout<<"              Latihan Perulangan C++ dengan While             "<<endl;
+ cout<<"=============================================================="<<endl;
+ cout<<"1.Menampilkan deret angka 1 sampai 10                      :  ";
+        while(bil1<=10)
+        {
+        cout<<bil1;
+        bil1++;
+        }
+ cout<<endl;
+ int bil2=0;
+ cout<<"2.Menampilkan deret bilangan genap dari angka 1 sampai 10  :  ";
+        while(bil2<10)
+        {
+        bil2=bil2+2;
+        cout<<bil2;
+        }
+ int bil3=0;
+ cout<<endl;
+ cout<<"3.Menampilkan deret bilangan ganjil dari angka 1 sampai 10 :  ";
+        while(bil3<10)
+        {
+        bil3=bil3+1;
+        cout<<bil3;
+        bil3++;
+        }
+getch();
+}
+
+
+
+ Perulangan C++ menngunakan Do-While
+
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+ int bil1=0,bil2=0,bil3=0;
+ cout<<"              Latihan Perulangan C++ dengan Do-While          "<<endl;
+ cout<<"=============================================================="<<endl;
+ cout<<"1.Menampilkan deret angka 1 sampai 10                      :  ";
+ do
+ {
+   cout<<bil1;
+   bil1++;
+ }while(bil1<=10);
+ cout<<endl;
+ cout<<"2.Menampilkan deret bilangan genap dari angka 1 sampai 10  :  ";
+ do
+ {
+   bil2=bil2+2;
+   cout<<bil2;
+   bil1++;
+ }while(bil2<10);
+ cout<<endl;
+ cout<<"3.Menampilkan deret bilangan ganjil dari angka 1 sampai 10 :  ";
+ do
+ {
+   bil3=bil3+1;
+   cout<<bil3;
+   bil3++;
+ }while(bil3<10);
+ getch();
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<iostream.h>
+#include<conio.h>
+
+void main ()
+{
+ float r,s,L1,K1,L2,K2;
+ char pilih,A,B,menu;  //menu==>> merupakan perulangan untuk kembali ke tampilan awal
+ do
+ {
+ clrscr();    //perintah untuk membersihkan layar
+ cout<<"Pilihan Menghitung Luas Dan Keliling Bangun Ruang"<<endl<<endl;
+ cout<<"A. Bangun Lingkaran"<<endl;
+ cout<<"B. Bangun Segiempat"<<endl<<endl;
+ cout<<"Masukkan Pilihan Bangun Yang Ingin Anda Hitung: ";
+ cin>>pilih;
+ cout<<endl;
+
+ clrscr();
+ if (pilih =='A'|| pilih=='a') //'==' merupakan operator relasi(perbandingan)
+        {
+         cout<<"Menghitung Luas Dan Keliling Bangun Lingkaran"<<endl;
+         cout<<"Masukkan jari-jari lingkaran = ";
+         cin>>r;
+         L1 = 3.14*r*r;
+         K1 = 2*3.14*r;
+         cout<<"Luas Bangun lingkaran = "<<L1<<endl;
+         cout<<"Keliling lingkaran = "<<K1<<endl;
+        }
+
+if (pilih =='B' || pilih=='b')
+         {
+         cout<<"Menghitung Luas Dan Keliling Bangun Segiempat"<<endl;
+         cout<<"Masukkan panjang sisisegiempat = ";
+         cin>>s;
+         L2 = s*s;
+         K2 = 2*s;
+         cout<<"Luas Bangun Segiempat = "<<L2<<endl;
+         cout<<"Keliling Segiempat = "<<K2;
+         }
+        cout<<endl;
+        cout<<endl;
+        cout<<"Apakah Anda Ingin Kembali ke Menu (Y/T)= ";
+        cin>>menu;
+}while(menu=='Y' || menu=='y'); // '||' merupakan operator logika OR
+
+ getch ();
+} 
